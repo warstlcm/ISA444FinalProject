@@ -47,3 +47,8 @@ the actual value hits zero. MAE and RMSE are the better metrics to rely
 on. Since demand is already scaled between 0 and 1, an MAE of 0.05 
 means forecasts were off by about 5 percentage points of occupancy on 
 average.
+
+## Winning Model Forecast
+Based on the cross-validation results, LightGBM was selected as the 
+winning model and used to generate the final 28-day occupancy forecasts 
+for all 19 hotel properties. These forecasts are saved in champion_lgbm_forecasts.csv
