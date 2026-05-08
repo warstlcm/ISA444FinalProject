@@ -13,13 +13,17 @@ and explain which methods perform best and why.
 - **Evaluation:** 5-fold time-series cross-validation, non-overlapping
 
 ## Models Compared
-All models use the Nixtlaverse and TimeCopilot suites only.
+
 
 **| Family | Model |**
 | Baseline | Naive, SeasonalNaive, RandomWalkWithDrift |
+
 | Statistical | AutoETS, AutoARIMA |
+
 | Machine Learning | LightGBM (via MLForecast) |
+
 | Neural | AutoNBEATS, AutoNHITS (via NeuralForecast) |
+
 | Foundation | Chronos (via TimeCopilot) |
 
 ## Evaluation Metrics
