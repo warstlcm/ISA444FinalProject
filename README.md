@@ -48,6 +48,31 @@ on. Since demand is already scaled between 0 and 1, an MAE of 0.05
 means forecasts were off by about 5 percentage points of occupancy on 
 average.
 
+**Results by Metric**
+
+**MAE:** LightGBM was the clear winner. It had an average MAE of 0.037 compared 
+to the next best Chronos at 0.101. It won 75 out of 90 series. The otb gave it a huge edge.
+
+**RMSE:** LightGBM averaged 0.050 while everyone else was above 0.12. It won 76 series. 
+The gap here actually shows that LightGBM wasn't just better on average, but it also 
+avoided the big misses that RMSE penalizes.
+
+**MAPE:** LightGBM again at 0.108 average vs Chronos at 0.214. It is important 
+to note that MAPE isn't super reliable here because some hotels hit 
+zero occupancy on certain days, which makes MAPE break down. So take 
+these numbers with a grain of salt and lean more on MAE and RMSE.
+
+**MASE:** LightGBM averaged 0.357. A MASE under 1 means it actually beat 
+the Seasonal Naive benchmark, which none of the other models managed to do consistently.
+
+**Bias(ME):** LightGBM wasn't the winner here. AutoNBEATS won 18 
+series and AutoETS took 15. Most models slightly under predicted demand on average, 
+which makes sense given the gaps of 0 pulling averages down.
+
+**AutoNHITS:** Showed inf across all metrics, which means something went 
+wrong during that model's cross-validation. It should be excluded from any metric 
+comparisons.
+
 ## Winning Model Forecast
 Based on the cross-validation results, LightGBM was selected as the 
 winning model and used to generate the final 28-day occupancy forecasts 
