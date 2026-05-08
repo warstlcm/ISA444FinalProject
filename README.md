@@ -82,3 +82,6 @@ comparisons.
 Based on the cross-validation results, LightGBM was selected as the 
 winning model and used to generate the final 28-day occupancy forecasts 
 for all 19 hotel properties. These forecasts are saved in champion_lgbm_forecasts.csv
+
+## Important:
+I had colab assist me with the last code box.
