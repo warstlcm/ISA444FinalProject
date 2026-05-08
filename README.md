@@ -16,6 +16,7 @@ and explain which methods perform best and why.
 
 
 **| Family | Model |**
+
 | Baseline | Naive, SeasonalNaive, RandomWalkWithDrift |
 
 | Statistical | AutoETS, AutoARIMA |
